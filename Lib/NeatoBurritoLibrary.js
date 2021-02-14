@@ -2576,8 +2576,11 @@ var NeatoLib = {
 
 		if (!document.getElementsByClassName("toasts").length) {
 
-			const container = document.getElementsByClassName(NeatoLib.Modules.get(['sidebar', 'guilds']).guilds.split(" ")[0])[0].nextSibling,
-				memberlist = container.getElementsByClassName(NeatoLib.Modules.get("membersWrap").membersWrap)[0],
+			const container = document.getElementsByClassName(NeatoLib.Modules.get(['sidebar', 'guilds']).guilds.split(" ")[0])[0].nextSibling;
+			console.log(NeatoLib.Modules.get(['sidebar', 'guilds']).guilds.split(" ")[0]);
+			console.log(document.getElementsByClassName(NeatoLib.Modules.get(['sidebar', 'guilds']).guilds.split(" ")[0])[0]);
+				console.log(conatiner);
+				const memberlist = container.getElementsByClassName(NeatoLib.Modules.get("membersWrap").membersWrap)[0],
 				form = container ? container.getElementsByTagName("form")[0] : undefined,
 				left = container ? container.getBoundingClientRect().left : 310,
 				right = memberlist ? memberlist.getBoundingClientRect().left : 0,
